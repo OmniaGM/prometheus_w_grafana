@@ -1,0 +1,5 @@
+./monitoring_config/alertmanager/config.yml
+./monitoring_config/prometheus/prometheus.yml
+*.retey
+.vscode
+./scripts/get-ec2-ip/ec2-list.json
