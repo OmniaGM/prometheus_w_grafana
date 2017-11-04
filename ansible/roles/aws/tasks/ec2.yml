@@ -1,0 +1,30 @@
+---
+- name: Create an ec2 demo instance 
+  ec2:
+    key_name: "{{ keypair }}"
+    instance_type: "{{ instance_type}}"
+    image: "{{ ami }}"
+    wait: true
+    region: "{{ aws_region }}"
+    count_tag:
+      Name: wordpress
+    instance_tags:
+      Name: wordpress
+    vpc_subnet_id:    "{{ public_subnet_id }}"
+    assign_public_ip: yes
+  register: ec2
+
+- name: Create an ec2 monitor instance 
+  ec2:
+    key_name: "{{ keypair }}"
+    instance_type: "{{ instance_type}}"
+    image: "{{ ami }}"
+    wait: true
+    region: "{{ aws_region }}"
+    count_tag:
+      Name: prom
+    instance_tags:
+      Name: prom
+    vpc_subnet_id: "{{ public_subnet_id }}"
+    assign_public_ip: yes
+  register: ec2
