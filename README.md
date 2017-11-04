@@ -1,0 +1,1 @@
+![Infra Structure](https://www.lucidchart.com/publicSegments/view/8b13fa5d-eac5-4581-b240-fc7def4f913c/image.jpeg)
