@@ -1,0 +1,13 @@
+--- 
+- name: Install monitor
+  docker_service:
+    project_src: /src/
+    files: 
+      - compose/docker-compose-monitor.yml
+    build: yes
+    restarted: true    
+    state: present
+  register: output
+
+- debug:
+    var: output
