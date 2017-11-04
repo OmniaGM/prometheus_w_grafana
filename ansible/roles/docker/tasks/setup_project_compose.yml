@@ -1,0 +1,5 @@
+---
+- name: Copy Compose
+  copy: 
+    src: ../../../compose
+    dest: /src/

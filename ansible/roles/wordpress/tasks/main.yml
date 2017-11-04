@@ -1,0 +1,12 @@
+---
+- name: Install wordpress
+  docker_service:
+    project_src: /src/
+    files: compose/docker-compose.yml
+    build: yes
+    restarted: true    
+    state: present
+  register: output
+
+- debug:
+    var: output

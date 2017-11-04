@@ -1,0 +1,5 @@
+---
+- name: Copy Config files
+  copy: 
+    src: "../monitoring_config"
+    dest: /src/compose
