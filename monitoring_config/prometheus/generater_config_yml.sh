@@ -52,4 +52,11 @@ scrape_configs:
         - perf_schema.tableiowaits
         - perf_schema.indexiowaits
         - perf_schema.tablelocks
+  
+  - job_name: 'nginx state'
+    scrape_interval: 15s
+    static_configs:
+      - targets: ['$IP:9113']
+
+
 EOF

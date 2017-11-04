@@ -20,7 +20,7 @@ services:
       - MYSQL_USER=wordpress
       - MYSQL_PASSWORD=wordpress
     restart: always
-
+    
   node-exporter:
     image: prom/node-exporter
     ports:
@@ -53,3 +53,10 @@ services:
     ports:
       - 8088:8080
     restart: always
+
+  nginx-exporter:
+    image: fish/nginx-exporter
+    command:
+      - "-nginx.scrape_uri=http://127.0.0.1:8080/nginx_status"
+    ports: 
+      - 9113:9113
