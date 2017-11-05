@@ -11,7 +11,7 @@ This will create 2 EC2 instances (wordpress, prom)
 
 * **wordpress** EC2 contains:
     
-    * Wordpress, you can access it from `<WORDPRESS_EC2_IP>:8080`, when you access it first time it will ask you about you blog setup
+    * Wordpress behind Nginx, you can access it from `<WORDPRESS_EC2_IP>`, when you access it first time it will ask you about you blog setup
     
     * MariaDB
     
@@ -42,7 +42,7 @@ As you see here this chart explain more how it looks like
 ### Local Run
 To run the whole system on you local machine just run this command `./run-dev.sh`
 
-* **Wordpress** [localhost:8080](localhost:8080)
+* **Nginx** [localhost](localhost)
 
 * **Prometheus** [localhost:9090](localhost:9090)
 
