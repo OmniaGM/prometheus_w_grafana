@@ -20,7 +20,7 @@
     }
   ],
   "id": null,
-  "title": "High Load",
+  "title": "High Load Dashboard",
   "tags": ["prometheus", "db", "node"],
   "style": "dark",
   "timezone": "browser",
