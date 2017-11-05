@@ -1,2 +1,3 @@
 - include: vpc.yml
+- include: iam.yml
 - include: ec2.yml

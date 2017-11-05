@@ -1,0 +1,26 @@
+- name: "ec2_iamrole Create non existing ECS IAM roles"
+  iam:
+    iam_type: role
+    name: "role-{{ vpc_name }}-ecs"
+    state: present
+    trust_policy:
+      Version: '2012-10-17'
+      Statement:
+      - Action: sts:AssumeRole
+        Effect: Allow
+        Principal:
+          Service: ec2.amazonaws.com
+  register: iam_role_res
+
+- name: Copy files
+  copy: 
+    src: "../files/policy.json"
+    dest: ./
+
+- name: Apply policies to new role
+  iam_policy:
+    iam_type: role
+    iam_name: "role-{{ vpc_name }}-ecs"
+    policy_name: "role-{{ vpc_name }}-ecs"
+    policy_document: ./policy.json
+    state: present

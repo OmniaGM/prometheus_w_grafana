@@ -1,0 +1,18 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "",
+            "Effect": "Allow",
+            "Action": [
+                "ecs:ListServices",
+                "ecs:ListContainerInstances",
+                "ecs:ListClusters",
+                "ecs:DescribeServices",
+                "ecs:DescribeContainerInstances",
+                "ecs:DescribeClusters"
+            ],
+            "Resource": "*"
+        }
+    ]
+}

@@ -57,6 +57,9 @@ scrape_configs:
     scrape_interval: 15s
     static_configs:
       - targets: ['$IP:9113']
-
-
+      
+  - job_name: "EC2 Metrics"
+    scrape_interval: 15s
+    static_configs:
+      - targets: ['$IP:9222']
 EOF

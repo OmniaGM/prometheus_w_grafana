@@ -60,3 +60,11 @@ services:
       - "-nginx.scrape_uri=http://127.0.0.1:8080/nginx_status"
     ports: 
       - 9113:9113
+
+  ecs-exporter: 
+    image: slok/ecs-exporter
+    command:
+      - "-aws.region=eu-west-1"
+      - "-debug"
+    ports: 
+      - 9222:9222
