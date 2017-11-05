@@ -8,6 +8,23 @@ ALERT InstanceDown
     description = "{{ $labels.instance }} of job {{ $labels.job }} has been down for more than 5 minutes.",
   }
 
+
+ALERT EC2Down
+  IF ecs_up == 0
+  FOR 30s
+  LABELS { severity = "Warning" }
+  ANNOTATIONS {
+    summary = "EC2 is down"
+  }
+
+ALERT DBDown
+  IF mysql_up == 0
+  FOR 30s
+  LABELS { severity = "Warning" }
+  ANNOTATIONS {
+    summary = "MySQL is down"
+  }
+
 # Alert for any instance that have a median request latency >1s.
 ALERT APIHighRequestLatency
   IF api_http_request_latencies_second{quantile="0.5"} > 1

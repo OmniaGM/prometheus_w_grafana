@@ -71,18 +71,18 @@
           "steppedLine": false,
           "targets": [
             {
-              "expr": "nginx_exporter_scrape_failures_total",
+              "expr": "nginx_connections_processed_total",
               "hide": false,
               "intervalFactor": 2,
               "legendFormat": "",
-              "metric": "nginx_exporter_scrape_failures_total",
+              "metric": "nginx_connections_processed_total",
               "refId": "A",
               "step": 10
             }
           ],
           "timeFrom": null,
           "timeShift": null,
-          "title": "Total Failures",
+          "title": "Nginx Connections",
           "tooltip": {
             "msResolution": false,
             "shared": true,
@@ -113,7 +113,7 @@
           ]
         }
       ],
-      "title": "Total Failures"
+      "title": "Connections"
     }
   ],
   "time": {

@@ -19,7 +19,7 @@ scrape_configs:
     params:
       module: [http_2xx, http_post_2xx, http_4xx_5xx, debug=true]
     static_configs:
-      - targets: ['$IP:8080']
+      - targets: ['$IP:80']
     relabel_configs:
       - source_labels: [__address__]
         target_label: __param_target

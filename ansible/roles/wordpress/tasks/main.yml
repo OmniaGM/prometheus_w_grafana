@@ -2,14 +2,13 @@
 - name: Copy Config files
   copy: 
     src: "../nginx"
-    dest: /src/compose
+    dest: /src
 
 - name: Install wordpress
   docker_service:
     project_src: /src/
     files: 
       - compose/docker-compose.yml
-      - compose/docker-compose-nginx.yml
     build: yes
     restarted: true    
     state: present

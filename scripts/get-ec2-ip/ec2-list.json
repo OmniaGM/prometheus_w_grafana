@@ -1,29 +1,29 @@
 {
   "_meta": {
     "hostvars": {
-      "54.154.209.118": {
-        "ansible_host": "54.154.209.118", 
+      "54.171.248.22": {
+        "ansible_host": "54.171.248.22", 
         "ec2__in_monitoring_element": false, 
         "ec2_account_id": "723753375271", 
         "ec2_ami_launch_index": "0", 
         "ec2_architecture": "x86_64", 
         "ec2_block_devices": {
-          "xvda": "vol-06a34033c84f5b7ef"
+          "xvda": "vol-0ff86f4d4ca2a2b76"
         }, 
         "ec2_client_token": "", 
-        "ec2_dns_name": "ec2-54-154-209-118.eu-west-1.compute.amazonaws.com", 
+        "ec2_dns_name": "ec2-54-171-248-22.eu-west-1.compute.amazonaws.com", 
         "ec2_ebs_optimized": false, 
         "ec2_eventsSet": "", 
         "ec2_group_name": "", 
         "ec2_hypervisor": "xen", 
-        "ec2_id": "i-029c7ae24590a9160", 
+        "ec2_id": "i-04ab4d96716e8f7ec", 
         "ec2_image_id": "ami-acd005d5", 
         "ec2_instance_type": "t2.small", 
-        "ec2_ip_address": "54.154.209.118", 
+        "ec2_ip_address": "54.171.248.22", 
         "ec2_item": "", 
         "ec2_kernel": "", 
         "ec2_key_name": "demo", 
-        "ec2_launch_time": "2017-11-05T14:02:56.000Z", 
+        "ec2_launch_time": "2017-11-05T21:47:25.000Z", 
         "ec2_monitored": false, 
         "ec2_monitoring": "", 
         "ec2_monitoring_state": "disabled", 
@@ -32,61 +32,9 @@
         "ec2_platform": "", 
         "ec2_previous_state": "", 
         "ec2_previous_state_code": 0, 
-        "ec2_private_dns_name": "ip-10-0-0-4.eu-west-1.compute.internal", 
-        "ec2_private_ip_address": "10.0.0.4", 
-        "ec2_public_dns_name": "ec2-54-154-209-118.eu-west-1.compute.amazonaws.com", 
-        "ec2_ramdisk": "", 
-        "ec2_reason": "", 
-        "ec2_region": "eu-west-1", 
-        "ec2_requester_id": "", 
-        "ec2_root_device_name": "/dev/xvda", 
-        "ec2_root_device_type": "ebs", 
-        "ec2_security_group_ids": "sg-365b974d", 
-        "ec2_security_group_names": "default", 
-        "ec2_sourceDestCheck": "true", 
-        "ec2_spot_instance_request_id": "", 
-        "ec2_state": "running", 
-        "ec2_state_code": 16, 
-        "ec2_state_reason": "", 
-        "ec2_subnet_id": "subnet-3e1f4777", 
-        "ec2_tag_Name": "wordpress", 
-        "ec2_virtualization_type": "hvm", 
-        "ec2_vpc_id": "vpc-9fad89f8"
-      }, 
-      "54.229.137.6": {
-        "ansible_host": "54.229.137.6", 
-        "ec2__in_monitoring_element": false, 
-        "ec2_account_id": "723753375271", 
-        "ec2_ami_launch_index": "0", 
-        "ec2_architecture": "x86_64", 
-        "ec2_block_devices": {
-          "xvda": "vol-06bf40983f09e0399"
-        }, 
-        "ec2_client_token": "", 
-        "ec2_dns_name": "ec2-54-229-137-6.eu-west-1.compute.amazonaws.com", 
-        "ec2_ebs_optimized": false, 
-        "ec2_eventsSet": "", 
-        "ec2_group_name": "", 
-        "ec2_hypervisor": "xen", 
-        "ec2_id": "i-0d0cc48fa38711838", 
-        "ec2_image_id": "ami-acd005d5", 
-        "ec2_instance_type": "t2.small", 
-        "ec2_ip_address": "54.229.137.6", 
-        "ec2_item": "", 
-        "ec2_kernel": "", 
-        "ec2_key_name": "demo", 
-        "ec2_launch_time": "2017-11-05T14:02:38.000Z", 
-        "ec2_monitored": false, 
-        "ec2_monitoring": "", 
-        "ec2_monitoring_state": "disabled", 
-        "ec2_persistent": false, 
-        "ec2_placement": "eu-west-1a", 
-        "ec2_platform": "", 
-        "ec2_previous_state": "", 
-        "ec2_previous_state_code": 0, 
-        "ec2_private_dns_name": "ip-10-0-0-109.eu-west-1.compute.internal", 
-        "ec2_private_ip_address": "10.0.0.109", 
-        "ec2_public_dns_name": "ec2-54-229-137-6.eu-west-1.compute.amazonaws.com", 
+        "ec2_private_dns_name": "ip-10-0-0-205.eu-west-1.compute.internal", 
+        "ec2_private_ip_address": "10.0.0.205", 
+        "ec2_public_dns_name": "ec2-54-171-248-22.eu-west-1.compute.amazonaws.com", 
         "ec2_ramdisk": "", 
         "ec2_reason": "", 
         "ec2_region": "eu-west-1", 
@@ -104,55 +52,107 @@
         "ec2_tag_Name": "prom", 
         "ec2_virtualization_type": "hvm", 
         "ec2_vpc_id": "vpc-9fad89f8"
+      }, 
+      "54.194.227.172": {
+        "ansible_host": "54.194.227.172", 
+        "ec2__in_monitoring_element": false, 
+        "ec2_account_id": "723753375271", 
+        "ec2_ami_launch_index": "0", 
+        "ec2_architecture": "x86_64", 
+        "ec2_block_devices": {
+          "xvda": "vol-0c80a12a6ac687138"
+        }, 
+        "ec2_client_token": "", 
+        "ec2_dns_name": "ec2-54-194-227-172.eu-west-1.compute.amazonaws.com", 
+        "ec2_ebs_optimized": false, 
+        "ec2_eventsSet": "", 
+        "ec2_group_name": "", 
+        "ec2_hypervisor": "xen", 
+        "ec2_id": "i-0e8d123859dfb4419", 
+        "ec2_image_id": "ami-acd005d5", 
+        "ec2_instance_type": "t2.small", 
+        "ec2_ip_address": "54.194.227.172", 
+        "ec2_item": "", 
+        "ec2_kernel": "", 
+        "ec2_key_name": "demo", 
+        "ec2_launch_time": "2017-11-05T21:47:43.000Z", 
+        "ec2_monitored": false, 
+        "ec2_monitoring": "", 
+        "ec2_monitoring_state": "disabled", 
+        "ec2_persistent": false, 
+        "ec2_placement": "eu-west-1a", 
+        "ec2_platform": "", 
+        "ec2_previous_state": "", 
+        "ec2_previous_state_code": 0, 
+        "ec2_private_dns_name": "ip-10-0-0-50.eu-west-1.compute.internal", 
+        "ec2_private_ip_address": "10.0.0.50", 
+        "ec2_public_dns_name": "ec2-54-194-227-172.eu-west-1.compute.amazonaws.com", 
+        "ec2_ramdisk": "", 
+        "ec2_reason": "", 
+        "ec2_region": "eu-west-1", 
+        "ec2_requester_id": "", 
+        "ec2_root_device_name": "/dev/xvda", 
+        "ec2_root_device_type": "ebs", 
+        "ec2_security_group_ids": "sg-365b974d", 
+        "ec2_security_group_names": "default", 
+        "ec2_sourceDestCheck": "true", 
+        "ec2_spot_instance_request_id": "", 
+        "ec2_state": "running", 
+        "ec2_state_code": 16, 
+        "ec2_state_reason": "", 
+        "ec2_subnet_id": "subnet-3e1f4777", 
+        "ec2_tag_Name": "wordpress", 
+        "ec2_virtualization_type": "hvm", 
+        "ec2_vpc_id": "vpc-9fad89f8"
       }
     }
   }, 
   "ami_acd005d5": [
-    "54.154.209.118", 
-    "54.229.137.6"
+    "54.194.227.172", 
+    "54.171.248.22"
   ], 
   "ec2": [
-    "54.154.209.118", 
-    "54.229.137.6"
+    "54.194.227.172", 
+    "54.171.248.22"
   ], 
   "eu-west-1": [
-    "54.154.209.118", 
-    "54.229.137.6"
+    "54.194.227.172", 
+    "54.171.248.22"
   ], 
   "eu-west-1a": [
-    "54.154.209.118", 
-    "54.229.137.6"
+    "54.194.227.172", 
+    "54.171.248.22"
   ], 
-  "i-029c7ae24590a9160": [
-    "54.154.209.118"
+  "i-04ab4d96716e8f7ec": [
+    "54.171.248.22"
   ], 
-  "i-0d0cc48fa38711838": [
-    "54.229.137.6"
+  "i-0e8d123859dfb4419": [
+    "54.194.227.172"
   ], 
   "key_demo": [
-    "54.154.209.118", 
-    "54.229.137.6"
+    "54.194.227.172", 
+    "54.171.248.22"
   ], 
   "platform_undefined": [
-    "54.154.209.118", 
-    "54.229.137.6"
+    "54.194.227.172", 
+    "54.171.248.22"
   ], 
   "security_group_default": [
-    "54.154.209.118", 
-    "54.229.137.6"
+    "54.194.227.172", 
+    "54.171.248.22"
   ], 
   "tag_Name_prom": [
-    "54.229.137.6"
+    "54.171.248.22"
   ], 
   "tag_Name_wordpress": [
-    "54.154.209.118"
+    "54.194.227.172"
   ], 
   "type_t2_small": [
-    "54.154.209.118", 
-    "54.229.137.6"
+    "54.194.227.172", 
+    "54.171.248.22"
   ], 
   "vpc_id_vpc_9fad89f8": [
-    "54.154.209.118", 
-    "54.229.137.6"
+    "54.194.227.172", 
+    "54.171.248.22"
   ]
 }

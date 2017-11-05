@@ -1,16 +1,18 @@
 version: '3'
+
+networks: 
+  internal:
+
 services:
-  wordpress:
+  wp:
     image: wordpress
     environment:
       - WORDPRESS_DB_HOST=db:3306
       - WORDPRESS_DB_USER=wordpress
       - WORDPRESS_DB_PASSWORD=wordpress
-    links:
-      - db:mysql
-    ports:
-      - 8080:80
     restart: always
+    networks: 
+      - internal
 
   db:
     image: mariadb
@@ -20,7 +22,9 @@ services:
       - MYSQL_USER=wordpress
       - MYSQL_PASSWORD=wordpress
     restart: always
-    
+    networks: 
+      - internal
+
   node-exporter:
     image: prom/node-exporter
     ports:
@@ -32,16 +36,18 @@ services:
     ports:
       - 9104:9104
     environment:
-      - DATA_SOURCE_NAME="root:{{ .Values.mariadbRootPassword }}@(localhost:3306)/"
+      - DATA_SOURCE_NAME="root:{{ .Values.mariadbRootPassword }}@(db:3306)/"
     restart: always
-  
+    networks: 
+      - internal
+
   blackbox-exporter:
     image: prom/blackbox-exporter
     ports:
       - "9115:9115"
     restart: always
     volumes:
-      - ./monitoring_config/blackbox-exporter:/etc/blackbox_exporter
+      - ../monitoring_config/blackbox-exporter:/etc/blackbox_exporter
 
   cadvisor:
     image: google/cadvisor
@@ -53,14 +59,7 @@ services:
     ports:
       - 8088:8080
     restart: always
-
-  nginx-exporter:
-    image: fish/nginx-exporter
-    command:
-      - "-nginx.scrape_uri=http://127.0.0.1:8080/nginx_status"
-    ports: 
-      - 9113:9113
-
+    
   ecs-exporter: 
     image: slok/ecs-exporter
     command:
@@ -68,3 +67,26 @@ services:
       - "-debug"
     ports: 
       - 9222:9222
+    
+  nginx: 
+    image: nginx:latest
+    restart: always
+    volumes:
+      - "../nginx:/etc/nginx/conf.d"
+    ports:
+      - 80:80
+    networks: 
+      - internal
+    depends_on: 
+      - wp
+
+  nginx-exporter:
+    image: fish/nginx-exporter
+    ports: 
+      - 9113:9113
+    depends_on:
+      - nginx
+    command:
+      - "-nginx.scrape_uri=http://nginx/nginx_status"
+    networks: 
+      - internal

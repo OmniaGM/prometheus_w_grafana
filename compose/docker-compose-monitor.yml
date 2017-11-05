@@ -3,7 +3,7 @@ services:
   prometheus:
     image: prom/prometheus
     volumes:
-      - ./monitoring_config/prometheus/:/etc/prometheus/
+      - ../monitoring_config/prometheus/:/etc/prometheus/
     command:
       - '-config.file=/etc/prometheus/prometheus.yml'
       - '-storage.local.path=/prometheus'
@@ -12,8 +12,6 @@ services:
       - '-web.console.templates=/usr/share/prometheus/consoles'
     ports:
       - 9090:9090
-    links:
-      - alertmanager:alertmanager
     depends_on:
       - alertmanager
     restart: always
@@ -23,7 +21,7 @@ services:
     ports:
       - 9093:9093
     volumes:
-      - ./monitoring_config/alertmanager/:/etc/alertmanager/
+      - ../monitoring_config/alertmanager/:/etc/alertmanager/
     restart: always
     command:
       - '-config.file=/etc/alertmanager/config.yml'
@@ -34,5 +32,5 @@ services:
     depends_on:
       - prometheus
     volumes:
-      - ./monitoring_config/grafana:/etc/grafana
-      - ./monitoring_config/grafana-dashboards:/var/lib/grafana/dashboards
+      - ../monitoring_config/grafana:/etc/grafana
+      - ../monitoring_config/grafana-dashboards:/var/lib/grafana/dashboards

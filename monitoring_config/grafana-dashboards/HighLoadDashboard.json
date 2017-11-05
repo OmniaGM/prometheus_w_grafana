@@ -245,18 +245,18 @@
           "steppedLine": false,
           "targets": [
             {
-              "expr": "mysql_exporter_scrapes_total",
+              "expr": "mysql_exporter_last_scrape_duration_seconds",
               "hide": false,
               "intervalFactor": 2,
               "legendFormat": "",
-              "metric": "mysql_exporter_scrapes_total",
+              "metric": "mysql_exporter_last_scrape_duration_seconds",
               "refId": "A",
               "step": 10
             }
           ],
           "timeFrom": null,
           "timeShift": null,
-          "title": "DB Load",
+          "title": "DB",
           "tooltip": {
             "msResolution": false,
             "shared": true,
